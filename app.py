@@ -21,9 +21,9 @@ def send_sms():
 
     message = client.messages \
         .create(
-        body="Join Earth's mightiest heroes. Like Kevin Bacon.",
+        body="Go to https://auto-messaging-python.herokuapp.com/runLogic you fool, you'll get a message",
         from_='+19854652607',
-        to='+14255537653'
+        to='+12532234374'
     )
     # return "<p>sms sent<p>"
 
