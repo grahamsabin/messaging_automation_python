@@ -1,6 +1,7 @@
 from flask import Flask
 import os
 from twilio.rest import Client
+from db import mysql
 
 app = Flask(__name__)
 
@@ -9,6 +10,14 @@ app = Flask(__name__)
 def index():
     # base page, gives user instruction
     return "<p>Welcome to the general page, direct to {env}/sendSMS to send a message</p>"
+
+# @app.route("/api/test_DB_connection")
+# def test_DB():
+#     conn = None
+#     cursor = None
+#     try:
+#         conn = mysql.connect()
+#         cursor = conn.cursor
 
 
 def send_sms():
