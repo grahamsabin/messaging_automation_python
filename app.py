@@ -9,15 +9,15 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     # base page, gives user instruction
+    DB_host = os.getenv('CLEARDB_HOST')
+    DB_user = os.getenv('CLEARDB_USER')
+    DB_password = os.getenv('CLEARDB_PASSWORD')
+    DB_database = os.getenv('CLEARDB_DATABASE')
+    print(DB_host)
+    print(DB_user)
+    print(DB_password)
+    print(DB_database)
     return "<p>Welcome to the general page, direct to {env}/sendSMS to send a message</p>"
-
-# @app.route("/api/test_DB_connection")
-# def test_DB():
-#     conn = None
-#     cursor = None
-#     try:
-#         conn = mysql.connect()
-#         cursor = conn.cursor
 
 
 def send_sms():
